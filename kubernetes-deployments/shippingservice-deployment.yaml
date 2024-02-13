@@ -23,9 +23,10 @@ spec:
               value: "50051"
           livenessProbe:
             periodSeconds: 5
-            exec:
-              command: ["/bin/grpc_health_probe", "-addr=:50051"]
+              grpc:
+                port: "50051"
           readinessProbe:
             periodSeconds: 5
             exec:
-              command: ["/bin/grpc_health_probe", "-addr=:50051"]
+              grpc:
+                port: "50051"

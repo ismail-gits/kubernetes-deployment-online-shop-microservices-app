@@ -25,9 +25,10 @@ spec:
               value: "redis-cart:6379"
           livenessProbe:
             periodSeconds: 5
-            exec:
-              command: ["/bin/grpc_health_probe", "-addr=:7070"]
+              grpc:
+                port: "7070"
           readinessProbe:
             periodSeconds: 5
             exec:
-              command: ["/bin/grpc_health_probe", "-addr=:7070"]
+              grpc:
+                port: "7070"
