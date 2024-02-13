@@ -26,8 +26,8 @@ spec:
           livenessProbe:
             periodSeconds: 5
             grpc:
-              port: "7000"
+              port: 7000
           readinessProbe:
             periodSeconds: 5
             grpc:
-              port: "7000"
+              port: 7000
