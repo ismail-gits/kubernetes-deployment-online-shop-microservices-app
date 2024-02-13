@@ -9,3 +9,4 @@ kubectl delete -f kubernetes-services/productcatalogservice-service.yaml -n micr
 kubectl delete -f kubernetes-services/recommendationservice-service.yaml -n microservices
 kubectl delete -f kubernetes-services/redis-cart-service.yaml -n microservices
 kubectl delete -f kubernetes-services/shippingservice-service.yaml -n microservices
+kubectl delete -f kubernetes-services/ingress.yaml -n microservices

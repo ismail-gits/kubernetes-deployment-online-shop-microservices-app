@@ -9,3 +9,4 @@ kubectl apply -f kubernetes-services/productcatalogservice-service.yaml -n micro
 kubectl apply -f kubernetes-services/recommendationservice-service.yaml -n microservices
 kubectl apply -f kubernetes-services/redis-cart-service.yaml -n microservices
 kubectl apply -f kubernetes-services/shippingservice-service.yaml -n microservices
+kubectl apply -f kubernetes-services/ingress.yaml -n microservices
