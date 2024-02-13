@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: service
-          image: gcr.io/google-samples/microservices-demo/paymentservice
+          image: gcr.io/google-samples/microservices-demo/paymentservice:v0.9.0
           ports:
             - containerPort: 50051
           env:
