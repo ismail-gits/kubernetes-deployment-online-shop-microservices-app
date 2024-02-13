@@ -40,11 +40,13 @@ spec:
             - name: DISABLE_TRACKING
               value: "1"
           livenessProbe:
-            periodSeconds: 5
-            grpc:
+            periodSecond: 5
+            httpGet:
+              path: "/_healthz"
               port: 8080
           readinessProbe:
-            periodSeconds: 5
-            grpc:
+            periodSecond: 5
+            httpGet:
+              path: "/_healthz"
               port: 8080
             

@@ -28,11 +28,11 @@ spec:
               value: "1"
           livenessProbe:
             periodSeconds: 5
-            grpc:
+            tcpSocket:
               port: 6379
           readinessProbe:
             periodSeconds: 5
-            grpc:
+            tcpSocket:
               port: 6379
       volumes:
         - name: redis-data
