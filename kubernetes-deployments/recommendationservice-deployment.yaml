@@ -35,3 +35,7 @@ spec:
             periodSeconds: 5
             grpc:
               port: 8080
+          resources:
+            requests:
+              cpu: 100m
+              memory: 220Mi

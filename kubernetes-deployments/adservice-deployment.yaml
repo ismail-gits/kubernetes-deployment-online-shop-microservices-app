@@ -33,4 +33,8 @@ spec:
             periodSeconds: 5
             grpc:
               port: 9555
+          resources:
+            requests:
+              cpu: m
+              memory: Mi
               
