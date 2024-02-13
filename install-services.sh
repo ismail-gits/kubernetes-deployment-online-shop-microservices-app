@@ -1,11 +1,11 @@
-kubectl apply -f adservice-service.yaml
-kubectl apply -f cartservice-service.yaml
-kubectl apply -f checkoutservice-service.yaml
-kubectl apply -f currencyservice-service.yaml
-kubectl apply -f emailservice-service.yaml
-kubectl apply -f frontend-service.yaml
-kubectl apply -f paymentservice-service.yaml
-kubectl apply -f productcatalogservice-service.yaml
-kubectl apply -f recommendationservice-service.yaml
-kubectl apply -f redis-cart-service.yaml
-kubectl apply -f shippingservice-service.yaml
+kubectl apply -f adservice-service.yaml -n microservices
+kubectl apply -f cartservice-service.yaml -n microservices
+kubectl apply -f checkoutservice-service.yaml -n microservices
+kubectl apply -f currencyservice-service.yaml -n microservices
+kubectl apply -f emailservice-service.yaml -n microservices
+kubectl apply -f frontend-service.yaml -n microservices
+kubectl apply -f paymentservice-service.yaml -n microservices
+kubectl apply -f productcatalogservice-service.yaml -n microservices
+kubectl apply -f recommendationservice-service.yaml -n microservices
+kubectl apply -f redis-cart-service.yaml -n microservices
+kubectl apply -f shippingservice-service.yaml -n microservices
