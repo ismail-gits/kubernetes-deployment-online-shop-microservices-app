@@ -25,6 +25,10 @@ spec:
             periodSeconds: 5
             exec:
               command: ["/bin/grpc_health_probe", "-addr=:6379"]
+          readinessProbe:
+            periodSeconds: 5
+            exec:
+              command: ["/bin/grpc_health_probe", "-addr=:6379"]
       volumes:
         - name: redis-data
           emptyDir: {}
