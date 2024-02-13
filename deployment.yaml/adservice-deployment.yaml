@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adservice
+  labels:
+    app: adservice
+spec:
+  selector:
+    matchLabels:
+      app: adservice
+  template:
+    metadata:
+      labels:
+        app: adservice
+    spec:
+      containers:
+        - name: service
+          image: gcr.io/google-samples/microservices-demo/adservice
+          ports:
+            - containerPort: 9555
+          env:
+            - name: PORT
+              value: "9555"
