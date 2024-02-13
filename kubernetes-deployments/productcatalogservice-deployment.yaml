@@ -23,10 +23,9 @@ spec:
               value: "3550"
           livenessProbe:
             periodSeconds: 5
-              grpc:
-                port: "3550"
+            grpc:
+              port: "3550"
           readinessProbe:
             periodSeconds: 5
-            exec:
-              grpc:
-                port: "3550"
+            grpc:
+              port: "3550"

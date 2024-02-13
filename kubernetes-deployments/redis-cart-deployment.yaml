@@ -23,13 +23,12 @@ spec:
               mountPath: /data
           livenessProbe:
             periodSeconds: 5
-              grpc:
-                port: "6379"
+            grpc:
+              port: "6379"
           readinessProbe:
             periodSeconds: 5
-            exec:
-              grpc:
-                port: "6379"
+            grpc:
+              port: "6379"
       volumes:
         - name: redis-data
           emptyDir: {}

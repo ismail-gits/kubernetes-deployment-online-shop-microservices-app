@@ -25,10 +25,9 @@ spec:
               value: "redis-cart:6379"
           livenessProbe:
             periodSeconds: 5
-              grpc:
-                port: "7070"
+            grpc:
+              port: "7070"
           readinessProbe:
             periodSeconds: 5
-            exec:
-              grpc:
-                port: "7070"
+            grpc:
+              port: "7070"

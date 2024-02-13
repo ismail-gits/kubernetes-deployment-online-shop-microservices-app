@@ -35,10 +35,9 @@ spec:
               value: "cartservice:7070"
           livenessProbe:
             periodSeconds: 5
-              grpc:
-                port: "5050"
+            grpc:
+              port: "5050"
           readinessProbe:
             periodSeconds: 5
-            exec:
-              grpc:
-                port: "5050"
+            grpc:
+              port: "5050"

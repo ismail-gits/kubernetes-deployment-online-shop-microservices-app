@@ -23,10 +23,9 @@ spec:
               value: "8080"
           livenessProbe:
             periodSeconds: 5
-              grpc:
-                port: "8080"
+            grpc:
+              port: "8080"
           readinessProbe:
             periodSeconds: 5
-            exec:
-              grpc:
-                port: "8080"
+            grpc:
+              port: "8080"

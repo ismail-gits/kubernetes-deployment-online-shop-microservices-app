@@ -23,11 +23,10 @@ spec:
               value: "9555"
           livenessProbe:
             periodSeconds: 5
-              grpc:
-                port: "9555"
+            grpc:
+              port: "9555"
           readinessProbe:
             periodSeconds: 5
-            exec:
-              grpc:
-                port: "9555"
+            grpc:
+              port: "9555"
               
