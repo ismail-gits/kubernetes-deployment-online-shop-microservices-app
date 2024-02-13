@@ -23,3 +23,7 @@ spec:
               value: "7070"
             - name: REDIS_ADDR
               value: "redis-cart:6379"
+          livenessProbe:
+            periodSeconds: 5
+            exec:
+              command: ["/bin/grpc_health_probe", "-addr=:7070"]

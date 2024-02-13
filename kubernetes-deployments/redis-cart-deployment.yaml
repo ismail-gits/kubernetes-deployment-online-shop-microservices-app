@@ -21,6 +21,10 @@ spec:
           volumeMounts:
             - name: redis-data
               mountPath: /data
+          livenessProbe:
+            periodSeconds: 5
+            exec:
+              command: ["/bin/grpc_health_probe", "-addr=:6379"]
       volumes:
         - name: redis-data
           emptyDir: {}
