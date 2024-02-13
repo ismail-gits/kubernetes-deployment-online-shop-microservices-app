@@ -1,0 +1,11 @@
+kubectl delete -f kubernetes-deployments/adservice-deployment.yaml -n microservices
+kubectl delete -f kubernetes-deployments/cartservice-deployment.yaml -n microservices
+kubectl delete -f kubernetes-deployments/checkoutservice-deployment.yaml -n microservices
+kubectl delete -f kubernetes-deployments/currencyservice-deployment.yaml -n microservices
+kubectl delete -f kubernetes-deployments/emailservice-deployment.yaml -n microservices
+kubectl delete -f kubernetes-deployments/frontend-deployment.yaml -n microservices
+kubectl delete -f kubernetes-deployments/paymentservice-deployment.yaml -n microservices
+kubectl delete -f kubernetes-deployments/productcatalogservice-deployment.yaml -n microservices
+kubectl delete -f kubernetes-deployments/recommendationservice-deployment.yaml -n microservices
+kubectl delete -f kubernetes-deployments/redis-cart-deployment.yaml -n microservices
+kubectl delete -f kubernetes-deployments/shippingservice-deployment.yaml -n microservices
