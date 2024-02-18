@@ -27,25 +27,43 @@ Follow these steps to deploy the microservices in kubernetes cluster:
 
 2. **Configure Kubernetes**: Ensure your `kubectl` is set up to interact with your Kubernetes cluster.
 
-3. **Execute Deployment Scripts**:
+3. **Creating namespace**: Creating namespace to isolate resources:
 
     ```bash
-    ./install-deployments.sh
-    ./install-services.sh
+    kubectl create namespace onlineshopapp
     ```
 
-4. **Accessing the Application**: Once deployed, access the online shop application through the exposed services within your Kubernetes cluster.
-
-5. **Monitoring and Management**: Utilize Kubernetes tools for monitoring and managing the deployed microservices, ensuring optimal performance and reliability.
-
-6. **Uninstall Microservices**: To uninstall the microservices, run the uninstallation scripts:
+4. **Execute Deployment Scripts**:
 
     ```bash
-    ./uninstall-deployments.sh
-    ./uninstall-services.sh
+    ./install-deployments.sh -n onlineshopapp
+    ./install-services.sh -n onlineshopapp
+    ```
+
+5. **Accessing the Application**: Once deployed, access the online shop application through the exposed services within your Kubernetes cluster.
+
+6. **Monitoring and Management**: Utilize Kubernetes tools for monitoring and managing the deployed microservices, ensuring optimal performance and reliability.
+
+7. **Uninstall Microservices**: To uninstall the microservices, run the uninstallation scripts:
+
+    ```bash
+    ./uninstall-deployments.sh -n onlineshopapp
+    ./uninstall-services.sh -n onlineshopapp
     ```
 
 This will remove all deployed microservices associated with the online shop application from your Kubernetes cluster.
+
+## Security Best Practises:
+- Tag version for each container image
+- Livesness probe for each container
+- Readiness probe for each container
+- Resource requests for each container
+- Resource limits for each container
+- Using LoadBalancer instead of exposing NodePort, in this case we have used NodeBalancer of Linode
+- More than 1 replica for deployment
+- More than 1 worker node in the cluster
+- Using labels for each resources
+- Using namespaces to isolate resources
 
 ## Deployment Environment
 This application was deployed using Linode Kubernetes Engine (LKE).
