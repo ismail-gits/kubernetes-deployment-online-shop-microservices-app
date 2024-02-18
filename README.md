@@ -22,7 +22,7 @@ Follow these steps to deploy the microservices in kubernetes cluster:
 1. 1. **Clone the Repository**: Clone this repository to your local machine.
 
    ```bash
-   git clone https://gitlab.com/ismailGitlab/helm-chart-online-shop-microservices-application.git
+   git clone https://gitlab.com/ismailGitlab/kubernetes-deployment-online-shop-microservices-app.git
    ```
 
 2. **Configure Kubernetes**: Ensure your `kubectl` is set up to interact with your Kubernetes cluster.
@@ -44,6 +44,7 @@ Follow these steps to deploy the microservices in kubernetes cluster:
     ./uninstall-deployments.sh
     ./uninstall-services.sh
     ```
+
 This will remove all deployed microservices associated with the online shop application from your Kubernetes cluster.
 
 ## Deployment Environment
